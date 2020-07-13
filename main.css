@@ -159,27 +159,128 @@
 /* PARTE DESTRA */
 
 .chat{
-  background-color: green;
   float:left;
   height: 100%;
   width: 65%;
 }
 
 .chat-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
     height: 10%;
     width: 100%;
-    background-color: pink;
+    background-color: #e8e6e6;
     border-left: 1px solid grey;
 }
 
+.chat-top-sx{
+  display: flex;
+}
+.chat-top img{
+  height: 40px;
+  width: auto;
+  background-color: white;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+.chat-top-sx-scritte{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 15px;
+  font-size: 16px;
+}
+.chat-top-sx-scritte p{
+  color:grey;
+  font-size: 13px;
+}
+
+.chat-top-dx{
+  margin-right: 10px;
+}
+.chat-top-dx i{
+  margin-right: 10px;
+  color:#999999;
+}
+
 .chat-main{
-  height: 78%;
+  background-image: url(img/3.jpeg);
+  background-position: center;
+  background-size: auto;
+  background-repeat: repeat;
+  overflow-y: scroll;
+  height: 82%;
   width: 100%;
   background-color: red;
+  padding-top: 20px;
+
+}
+.chat-main-border{
+  margin: 0 10%;
+  display: flex;
+  flex-direction: column;
+}
+.msg{
+  position:relative;
+  height: 35px;
+  width: 10vw;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #dcf7c0;
+  margin-bottom: 30px;
+}
+.msg .ora{
+  font-size: 10px;
+  position: absolute;
+  bottom: 1px;
+  right: 10px;
+}
+.mio{
+  margin-left: 450px;
+}
+
+.amico{
+  background-color: white;
 }
 
 .chat-input{
-  height: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 8%;
   width: 100%;
-  background-color: green;
+  background-color: #f2eeea;
+}
+
+.chat-input-smile{
+  margin-left: 20px;
+  width: 10%;
+}
+
+.chat-input-smile i{
+  font-size: 22px;
+}
+
+.chat-input-main{
+  display: flex;
+  align-items: center;
+  height: 80%;
+  width: 90vw;
+  border-radius: 10px;
+  background-color: white;
+  margin-right: 45px;
+}
+.chat-input-main input{
+  border: none;
+  margin-left: 10px;
+}
+
+.chat-input-rec{
+  margin-right: 20px;
+  width: 10%;
+}
+
+.chat-input-rec i {
+  font-size: 22px;
 }
