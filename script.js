@@ -2,7 +2,9 @@ $(document).ready(premi);
 
 
 function premi (){
+ var testo = $(".chat-input input").val();
+ var btnPremuto = $("#btn").click ()
 
-var btnPremuto = $("#btn").click
-btnPremuto console.log("figa");
+ btnPremuto $(".chat-input").append(testo);
+
 }
