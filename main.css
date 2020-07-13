@@ -1,0 +1,185 @@
+*{
+  margin: 0;
+  padding:0;
+  box-sizing: border-box;
+
+}
+.sfondo{
+  display: flex;
+  justify-content: center;
+  margin: 3vh 0;
+
+}
+
+.schermata{
+  height: 94vh;
+  width: 84vw;
+}
+
+.contatti{
+  float: left;
+  width: 35%;
+  height: 100%
+}
+
+.contatti img {
+  height: auto;
+  width: 33px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.cont-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10%;
+  width: 100%;
+  background-color: #e8e6e6;
+}
+
+.cont-top-img{
+  margin-left: 20px
+}
+
+.cont-top-dx{
+  margin-right: 10px;
+}
+.cont-top-dx i{
+  margin-right: 10px;
+  color:#999999;
+}
+
+.cont-alert{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 12%;
+  width: 100%;
+  background-color: #68c2e3;
+}
+
+.cont-alert-img{
+  background-color: white;
+  border-radius: 50%;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  margin-left: 30px;
+  margin-right: 20px;
+}
+.cont-alert-img i{
+  color:#68c2e3;
+
+}
+
+.cont-alert-scritte{
+  font-size: 13px;
+  font-weight: bold;
+}
+.cont-alert-scritte a{
+  color:#999999;
+  font-weight: normal;
+}
+
+.cont-ricerca{
+  height: 8%;
+  width: 100%;
+  background-color: #e8e6e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.cont-ricerca-blocco{
+  background-color: white;
+  width: 96%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  border-radius: 5px;
+}
+.cont-ricerca-blocco i{
+  margin-left: 20px;
+  color:#999999;
+}
+.cont-ricerca-blocco input{
+  border: none;
+}
+
+.cont-elenco{
+  height: 70%;
+  width: auto;
+  overflow-y: scroll;
+}
+
+.cont-elenco-chat{
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: white;  ;
+  height: 60px;
+  border-bottom: 1px solid #ebebeb;
+}
+
+.selezionata{
+  background-color: #e6e6e6;
+  border-bottom: none;
+}
+
+.cont-elenco-chat-img{
+  margin-left: 20px;
+  margin-right: 15px;
+  height: 50px;
+
+}
+.cont-elenco-chat-img img{
+  height: 50px;
+  width: auto;
+}
+
+.cont-elenco-chat-testo{
+  color:black;
+  margin-right: 150px;
+}
+
+.cont-elenco-chat-testo p{
+  color:#999999;
+  font-size: 12px;
+}
+
+.cont-elenco-chat-orario{
+  color:#999999;
+  font-size: 12px;
+}
+
+
+/* PARTE DESTRA */
+
+.chat{
+  background-color: green;
+  float:left;
+  height: 100%;
+  width: 65%;
+}
+
+.chat-top{
+    height: 10%;
+    width: 100%;
+    background-color: pink;
+    border-left: 1px solid grey;
+}
+
+.chat-main{
+  height: 78%;
+  width: 100%;
+  background-color: red;
+}
+
+.chat-input{
+  height: 12%;
+  width: 100%;
+  background-color: green;
+}
