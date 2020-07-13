@@ -1,10 +1,24 @@
-$(document).ready(premi);
+// $(document).ready(premi);
+//
+//
+// function premi (){
+//  var testo = $(".chat-input input").val();
+//  var btnPremuto = $("#btn").click ()
+//
+//  btnPremuto $(".chat-input").append(testo);
+//
+// }
+
+$(".chat-input #btn").click(function() {
+  alert( "prova" );
+});
 
 
-function premi (){
- var testo = $(".chat-input input").val();
- var btnPremuto = $("#btn").click ()
+$("#btn").click(function() {
+  console.log("prova");
+});
 
- btnPremuto $(".chat-input").append(testo);
-
-}
+$("button").click(function() {
+  console.log("prova button");
+});
+alert("test");
