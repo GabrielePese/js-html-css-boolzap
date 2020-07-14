@@ -21,4 +21,16 @@ $(document).ready(function(){
     } ,1000)
 })
 
+  $("#ricerca").click(function(){
+
+    var testoRicerca = $(".cont-ricerca input").val();
+    console.log("la lettera inseria è : "+ testoRicerca);
+    $(".cont-ricerca input").val(" ");
+    var elencoNomi = $(".cont-elenco-chat-testo h5")
+    console.log(elencoNomi);
+    if (testoRicerca == elencoNomi) {
+      console.log("c'è una lettera");
+
+    }
+  });
 });
