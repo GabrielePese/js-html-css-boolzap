@@ -30,7 +30,7 @@ $(document).ready(function(){
 
 
     $("h5").each(function (){
-      if ($(this == testoRicerca)){
+      $(this).text("bella")
 
         console.log("trovato");
 
