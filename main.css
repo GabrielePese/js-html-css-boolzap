@@ -236,6 +236,23 @@
   bottom: 1px;
   right: 10px;
 }
+
+/* .msgClone{
+  position:relative;
+  height: 35px;
+  width: 10vw;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #dcf7c0;
+  margin-bottom: 30px;
+}
+.msgClone .ora{
+  font-size: 10px;
+  position: absolute;
+  bottom: 1px;
+  right: 10px;
+} */
+
 .mio{
   margin-left: 450px;
 }

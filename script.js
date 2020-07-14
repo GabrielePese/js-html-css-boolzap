@@ -1,24 +1,14 @@
-// $(document).ready(premi);
-//
-//
-// function premi (){
-//  var testo = $(".chat-input input").val();
-//  var btnPremuto = $("#btn").click ()
-//
-//  btnPremuto $(".chat-input").append(testo);
-//
-// }
+$(document).ready(function(){
+  $("#btn").click(function() {
+    // console.log("prova");
+    var testo = $(".chat-input input").val();
+    // console.log("testo inserito: " + testo);
 
-$(".chat-input #btn").click(function() {
-  alert( "prova" );
+
+    var clone = $(".chat-main-border .msg").clone();
+    clone.text(testo);
+    var target = $(".chat-main-border");
+    target.append(clone);
+
+})
 });
-
-
-$("#btn").click(function() {
-  console.log("prova");
-});
-
-$("button").click(function() {
-  console.log("prova button");
-});
-alert("test");
