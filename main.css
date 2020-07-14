@@ -222,36 +222,39 @@
   flex-direction: column;
 }
 .msg{
+  display: flex;
+  align-items: center;
   position:relative;
-  height: 35px;
+  height: auto;
   width: 10vw;
-  padding: 10px;
+  padding: 15px;
   border-radius: 10px;
   background-color: #dcf7c0;
   margin-bottom: 30px;
 }
+
+.msg h6{
+  margin-right: 30px;
+}
+
+.msg i{
+  font-size: 14px;
+  color:#999999;
+}
+.msg-menu{
+  display: none;
+}
+
+.msg i:hover .msg-menu{
+  display: block;
+}
+
 .msg .ora{
   font-size: 10px;
   position: absolute;
   bottom: 1px;
   right: 10px;
 }
-
-/* .msgClone{
-  position:relative;
-  height: 35px;
-  width: 10vw;
-  padding: 10px;
-  border-radius: 10px;
-  background-color: #dcf7c0;
-  margin-bottom: 30px;
-}
-.msgClone .ora{
-  font-size: 10px;
-  position: absolute;
-  bottom: 1px;
-  right: 10px;
-} */
 
 .mio{
   margin-left: 450px;
