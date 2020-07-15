@@ -35,9 +35,11 @@ $(document).ready(function(){
         console.log(nome);
 
         if (nome.toLowerCase().includes(testoRicerca.toLowerCase())) {
-          contact.show()
+          console.log("ok");
         }
-
+        else {
+          console.log("non trovato");
+        }
     })
 
 
