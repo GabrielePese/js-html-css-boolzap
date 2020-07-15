@@ -1,11 +1,12 @@
 $(document).ready(function(){
+
+// AL CLICK  INSERISCE IL MESSAGGIO NELLA CHAT
   $("#btn").click(function() {
 
     var testo = $(".chat-input input").val();
 
 
-    $(".chat-input input").val("");
-      //QST SERVE PER AZZERARE LA SCRITTA DOPO AVER PREMUTPO
+    $(".chat-input input").val("");     //QST SERVE PER AZZERARE LA SCRITTA DOPO AVER PREMUTPO
 
 
     var clone = $(".perClone .msg").clone();
@@ -21,6 +22,7 @@ $(document).ready(function(){
     } ,1000)
 })
 
+  // ALL'INVIO SU INVIO INSERISCE IL MESSAGGIO NELLA CHAT
 
     var target = $(".chat-input input")
     target.keyup( tastoPremuto)
@@ -51,6 +53,7 @@ $(document).ready(function(){
       }
     }
 
+// ALL'INIVIO FA LA RICERCA DEI CONTATTI NELL'ELENCO CONTATTI
     var target2 = $("#inputchat")
     target2.keyup(tastoPremuto2)
 
@@ -84,6 +87,8 @@ $(document).ready(function(){
       }
     }
 
+    // ALL'CLCIK FA LA RICERCA DEI CONTATTI NELL'ELENCO CONTATTI
+
   $("#ricerca").click(function(){
 
     var testoRicerca = $(".cont-ricerca input").val();
@@ -108,4 +113,13 @@ $(document).ready(function(){
 
 
   });
+
+// AL CLICK SUL CONTATTO APRE LA CONVERSAZIONE A DESTRA
+
+$(".cont-elenco-chat").click(function (){
+  console.log("cliccato sul contatto -- e ora cosa faccio? =/");
+
+
+});
+
 });
