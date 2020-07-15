@@ -27,18 +27,19 @@ $(document).ready(function(){
     console.log("la lettera inseria è : "+ testoRicerca);
     $(".cont-ricerca input").val(" ");
 
+    var contacts  = $(".cont-elenco-chat-testo")
+    contacts.each(function(){
+        var contact = $(this)
+        var nome = contact.find("h5").text()
 
+        console.log(nome);
 
-    $("h5").each(function (){
-      $(this).text("bella")
+        if (nome.toLowerCase().includes(testoRicerca.toLowerCase())) {
+          contact.show()
+        }
 
-        console.log("trovato");
-
-      }
-      else {
-        console.log("non trovato");
-      }
     })
+
 
 
   });
