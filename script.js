@@ -25,9 +25,10 @@ $(document).ready(function(){
 
     var testoRicerca = $(".cont-ricerca input").val();
     console.log("la lettera inseria è : "+ testoRicerca);
-    $(".cont-ricerca input").val(" ");
+    $(".cont-ricerca input").val("");
 
-    var contacts  = $(".cont-elenco-chat-testo")
+
+    var contacts  = $(".cont-elenco-chat")
     contacts.each(function(){
         var contact = $(this)
         var nome = contact.find("h5").text()
@@ -35,10 +36,10 @@ $(document).ready(function(){
         console.log(nome);
 
         if (nome.toLowerCase().includes(testoRicerca.toLowerCase())) {
-          console.log("ok");
+          contact.show();
         }
         else {
-          console.log("non trovato");
+          contact .hide();
         }
     })
 
