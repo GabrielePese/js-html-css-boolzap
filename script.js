@@ -23,19 +23,66 @@ $(document).ready(function(){
 
 
     var target = $(".chat-input input")
-    target.keydown(function(){
+    target.keyup( tastoPremuto)
 
+    function tastoPremuto (){
       var key = event.which
-      console.log(key);
+
 
       if (key == 13) {
-        console.log("hai premuto invio");
+        var testo = $(".chat-input input").val();
+
+
+        $(".chat-input input").val("");
+        var clone = $(".perClone .msg").clone();
+        clone.text(testo);
+        var target = $(".chat-main-border");
+        target.append(clone);
+
+        setTimeout (function(){
+          var clone2 = $(".perClone2 .msg").clone();
+          clone2.text("ok");
+          var target = $(".chat-main-border");
+          target.append(clone2);
+        } ,1000)
       }
       else {
-        console.log("premuto un tasto nON INVIO");
-      }
-  });
 
+      }
+    }
+
+    var target2 = $("#inputchat")
+    target2.keyup(tastoPremuto2)
+
+    function tastoPremuto2 (){
+      var key = event.which
+      console.log(event.which);
+
+      if (key == 13) {
+
+        var testoRicerca = $(".cont-ricerca input").val();
+        console.log("la lettera inseria è : "+ testoRicerca);
+        $(".cont-ricerca input").val("");
+
+
+        var contacts  = $(".cont-elenco-chat")
+        contacts.each(function(){
+            var contact = $(this)
+            var nome = contact.find("h5").text()
+
+            console.log(nome);
+
+            if (nome.toLowerCase().includes(testoRicerca.toLowerCase())) {
+              contact.show();
+            }
+            else {
+              contact .hide();
+            }
+        })
+
+
+      }
+    }
 
   $("#ricerca").click(function(){
 
@@ -60,7 +107,5 @@ $(document).ready(function(){
     })
 
 
-
   });
-
 });
