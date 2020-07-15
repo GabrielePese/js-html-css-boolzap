@@ -4,7 +4,7 @@ $(document).ready(function(){
     var testo = $(".chat-input input").val();
 
 
-    $(".chat-input input").val(" ");
+    $(".chat-input input").val("");
       //QST SERVE PER AZZERARE LA SCRITTA DOPO AVER PREMUTPO
 
 
@@ -20,6 +20,22 @@ $(document).ready(function(){
       target.append(clone2);
     } ,1000)
 })
+
+
+    var target = $(".chat-input input")
+    target.keydown(function(){
+
+      var key = event.which
+      console.log(key);
+
+      if (key == 13) {
+        console.log("hai premuto invio");
+      }
+      else {
+        console.log("premuto un tasto nON INVIO");
+      }
+  });
+
 
   $("#ricerca").click(function(){
 
