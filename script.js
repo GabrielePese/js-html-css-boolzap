@@ -15,13 +15,13 @@ $(document).ready(function(){
     clone.find("h6").text(testo)
     clone.find(".ora").text(getHour)
 
-    var target = $(".chat-main-border");
+    var target = $(".chat-main-border.active");
     target.append(clone);
 
     setTimeout (function(){
       var clone2 = $(".perClone2 .msg").clone();
-      clone2.text("ok");
-      var target = $(".chat-main-border");
+      clone2.find("h6").text("ok");
+      var target = $(".chat-main-border.active");
       target.append(clone2);
     } ,1000)
 })
@@ -53,19 +53,17 @@ function getHour ()  {
         clone.find("h6").text(testo)
         clone.find(".ora").text(getHour)
 
-        var target = $(".chat-main-border");
+        var target = $(".chat-main-border.active");
         target.append(clone);
 
         setTimeout (function(){
           var clone2 = $(".perClone2 .msg").clone();
-          clone2.text("ok");
-          var target = $(".chat-main-border");
+          clone2.find("h6").text("ok");
+          var target = $(".chat-main-border.active");
           target.append(clone2);
         } ,1000)
       }
-      else {
 
-      }
     }
 
 // ALL'INIVIO FA LA RICERCA DEI CONTATTI NELL'ELENCO CONTATTI
@@ -145,5 +143,26 @@ $(".cont-elenco-chat").click(function (){
   conversations.removeClass("active")
   selectedConv.toggleClass("active");
 });
+
+// CLICK PER APRIRE MENU TENDINA NELLA CONVERSAZIONE
+$(document).on( "click", "span", function() {
+
+  var bottoneMsg = $(this);
+  var menuNasc = bottoneMsg.siblings(".msg-menu")
+
+  menuNasc.toggleClass("active")
+
+  // CLICCO SU ELIMINA E CANCELLA IL MEX
+
+  $(".msg-menu .delete").click(function(){
+
+    var selectUno = $(this)
+    var selectedPadre = (selectUno).parents(".msg")
+
+    selectedPadre.remove()
+});
+
+
+})
 
 });

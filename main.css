@@ -230,9 +230,7 @@
   flex-direction: column;
   display: none;
 }
-.active {
-  display: block;
-}
+
 .msg{
   display: flex;
   align-items: center;
@@ -323,4 +321,8 @@
 
 .chat-input-rec i {
   font-size: 22px;
+}
+
+.active {
+  display: block;
 }
