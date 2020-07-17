@@ -10,7 +10,11 @@ $(document).ready(function(){
 
 
     var clone = $(".perClone .msg").clone();
-    clone.text(testo);
+
+
+    clone.find("h6").text(testo)
+    clone.find(".ora").text(getHour)
+
     var target = $(".chat-main-border");
     target.append(clone);
 
@@ -22,7 +26,15 @@ $(document).ready(function(){
     } ,1000)
 })
 
-  // ALL'INVIO SU INVIO INSERISCE IL MESSAGGIO NELLA CHAT
+function getHour ()  {
+  var ora = new Date()
+  return ora.getHours()+ ":" + ora.getMinutes()
+
+
+}
+  console.log(getHour());
+
+  // ALL'INVIO  INSERISCE IL MESSAGGIO NELLA CHAT
 
     var target = $(".chat-input input")
     target.keyup( tastoPremuto)
@@ -37,7 +49,10 @@ $(document).ready(function(){
 
         $(".chat-input input").val("");
         var clone = $(".perClone .msg").clone();
-        clone.text(testo);
+
+        clone.find("h6").text(testo)
+        clone.find(".ora").text(getHour)
+
         var target = $(".chat-main-border");
         target.append(clone);
 
@@ -117,9 +132,18 @@ $(document).ready(function(){
 // AL CLICK SUL CONTATTO APRE LA CONVERSAZIONE A DESTRA
 
 $(".cont-elenco-chat").click(function (){
-  console.log("cliccato sul contatto -- e ora cosa faccio? =/");
+  var clickedContact = $(this)
+  var id = $(this).data("id")
+  var contacts = $(".cont-elenco-chat")
 
+  contacts.removeClass("selezionata")
+  clickedContact.toggleClass("selezionata");
 
+  var conversations = $(".chat-main-border")
+  var selectedConv = $(".chat-main-border[data-id="+ id +"]")
+
+  conversations.removeClass("active")
+  selectedConv.toggleClass("active");
 });
 
 });
