@@ -303,15 +303,20 @@
 .chat-input form{
   width: 100%;
   height: auto;
-  margin-right: 40px;
+
 }
 .chat-input input{
   border: none;
   background-color: white;
-  width: 100%;
+  width: 75%;
   height: 40px;
   border-radius: 5px;
+  margin-left: 25px;
 
+}
+
+.chat-input button{
+  margin-left: 30px;
 }
 
 .chat-input-rec{
