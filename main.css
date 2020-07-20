@@ -258,13 +258,25 @@
   bottom: -60px;
   left: 0;
   display: none;
-  border: 1px solid black;
+  border-radius: 10px;
   background-color: white;
+}
+.msg-menu ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.msg-menu .delete:hover{
+  cursor: pointer;
 }
 
 .msg i:hover .msg-menu{
   display: block;
 }
+
 
 .msg .ora{
   font-size: 10px;
