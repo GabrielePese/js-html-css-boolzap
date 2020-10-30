@@ -2,24 +2,40 @@
   margin: 0;
   padding:0;
   box-sizing: border-box;
+  font-family: 'PT Sans', sans-serif;
+ scrollbar-width: thin;
 
+}
+body{
+  background-color: lightgray;
 }
 .sfondo{
   display: flex;
   justify-content: center;
-  margin: 3vh 0;
+  
+  background-color: purple;
 
 }
+.stringaverde{
+  height: 180px;
+  background-color: #009688;
+}
+
 
 .schermata{
-  height: 94vh;
+  height: 88vh;
   width: 84vw;
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translate(-50%);
 }
 
 .contatti{
   float: left;
   width: 35%;
-  height: 100%
+  height: 100%;
+ 
 }
 
 .contatti img {
@@ -130,6 +146,9 @@
   border-bottom: 1px solid #ebebeb;
 }
 
+.riempi{
+  height: 554px;
+}
 
 
 .selezionata{
